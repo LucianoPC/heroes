@@ -27,5 +27,10 @@ Executar o servidor
     $ rails s
 
 Testes
-    Comando para executar os testes:
+    Comandos para executar os testes
+
+    Testes unitários:
     $ rake test:units
+
+    Testes funcionais:
+    $ rake test:functionals
