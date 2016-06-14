@@ -30,6 +30,9 @@ Projeto para a disciplina de Orientação a Objetos
 ## Testes
     Comandos para executar os testes
 
+    Todos os testes:
+    $ rake
+
     Testes unitários:
     $ rake test:units
 
