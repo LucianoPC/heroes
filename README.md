@@ -1,15 +1,16 @@
-== Heroes [![Build Status](https://travis-ci.org/LucianoPC/heroes.svg?branch=travis)](https://travis-ci.org/LucianoPC/heroes)
+# Heroes [![Build Status](https://travis-ci.org/LucianoPC/heroes.svg?branch=travis)](https://travis-ci.org/LucianoPC/heroes)
 
 Projeto para a disciplina de Orientação a Objetos
 
-Versão do Ruby
+
+## Versão do Ruby
     2.3.1
 
-Instalação
+## Instalação
     Para instalar as dependências do projeto execute o seguinte comando:
     $ bundle install
 
-Banco de dados
+## Banco de dados
     Comando para criar o banco de dados:
     $ rake db:create
 
@@ -19,14 +20,14 @@ Banco de dados
     Comando para deletar o banco:
     $ rake db:drop
 
-Executar o servidor
+## Executar o servidor
     Execute o seguinte comando:
     $ rails server
 
     ou:
     $ rails s
 
-Testes
+## Testes
     Comandos para executar os testes
 
     Testes unitários:
