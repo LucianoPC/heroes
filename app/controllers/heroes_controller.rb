@@ -1,6 +1,8 @@
+# controller of Hero model
 class HeroesController < ApplicationController
   before_action :set_hero, only: [:show, :edit, :update, :destroy]
 
+  NOTICE_MESSAGE = 'Hero was successfully'.freeze
   # GET /heroes
   # GET /heroes.json
   def index
@@ -28,7 +30,7 @@ class HeroesController < ApplicationController
 
     respond_to do |format|
       if @hero.save
-        format.html { redirect_to @hero, notice: 'Hero was successfully created.' }
+        format.html { redirect_to @hero, notice: "#{NOTICE_MESSAGE} created." }
         format.json { render :show, status: :created, location: @hero }
       else
         format.html { render :new }
@@ -42,7 +44,7 @@ class HeroesController < ApplicationController
   def update
     respond_to do |format|
       if @hero.update(hero_params)
-        format.html { redirect_to @hero, notice: 'Hero was successfully updated.' }
+        format.html { redirect_to @hero, notice: "#{NOTICE_MESSAGE} updated." }
         format.json { render :show, status: :ok, location: @hero }
       else
         format.html { render :edit }
@@ -56,19 +58,23 @@ class HeroesController < ApplicationController
   def destroy
     @hero.destroy
     respond_to do |format|
-      format.html { redirect_to heroes_url, notice: 'Hero was successfully destroyed.' }
+      format.html do
+        redirect_to heroes_url, notice: "#{NOTICE_MESSAGE} destroyed."
+      end
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_hero
-      @hero = Hero.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def hero_params
-      params.require(:hero).permit(:name)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_hero
+    @hero = Hero.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white
+  # list through.
+  def hero_params
+    params.require(:hero).permit(:name)
+  end
 end

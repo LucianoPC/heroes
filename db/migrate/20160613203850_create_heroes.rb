@@ -1,3 +1,4 @@
+# migration for class Hero
 class CreateHeroes < ActiveRecord::Migration
   def change
     create_table :heroes do |t|

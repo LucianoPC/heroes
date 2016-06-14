@@ -2,21 +2,21 @@ require 'test_helper'
 
 class HeroesControllerTest < ActionController::TestCase
   setup do
-    @hero =  heroes(:one)
+    @hero = heroes(:one)
   end
 
-  test "should get index" do
+  test 'should get index' do
     get :index
     assert_response :success
     assert_not_nil assigns(:heroes)
   end
 
-  test "should get new" do
+  test 'should get new' do
     get :new
     assert_response :success
   end
 
-  test "should create hero" do
+  test 'should create hero' do
     assert_difference('Hero.count') do
       post :create, hero: { name: @hero.name }
     end
@@ -24,22 +24,22 @@ class HeroesControllerTest < ActionController::TestCase
     assert_redirected_to hero_path(assigns(:hero))
   end
 
-  test "should show hero" do
+  test 'should show hero' do
     get :show, id: @hero
     assert_response :success
   end
 
-  test "should get edit" do
+  test 'should get edit' do
     get :edit, id: @hero
     assert_response :success
   end
 
-  test "should update hero" do
+  test 'should update hero' do
     patch :update, id: @hero, hero: { name: @hero.name }
     assert_redirected_to hero_path(assigns(:hero))
   end
 
-  test "should destroy hero" do
+  test 'should destroy hero' do
     assert_difference('Hero.count', -1) do
       delete :destroy, id: @hero
     end
