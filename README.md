@@ -1,4 +1,4 @@
-# Heroes [![Build Status](https://travis-ci.org/LucianoPC/heroes.svg?branch=travis)](https://travis-ci.org/LucianoPC/heroes)
+# Heroes [![Build Status](https://travis-ci.org/LucianoPC/heroes.svg?branch=travis)](https://travis-ci.org/LucianoPC/heroes) [![Code Climate](https://codeclimate.com/github/LucianoPC/heroes/badges/gpa.svg)](https://codeclimate.com/github/LucianoPC/heroes)
 
 Projeto para a disciplina de Orientação a Objetos
 
